@@ -5,6 +5,11 @@ function curry(func) {
 
     return function _curry(...args) {
         params = args.concat(params);
+        if (params.length === func.length) {
+            const res = func(...params);
+            params = [];
+            return res;
+        }
     };
 }
 

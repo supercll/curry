@@ -9,6 +9,8 @@ function curry(func) {
             const res = func(...params);
             params = [];
             return res;
+        } else {
+            return _curry;
         }
     };
 }

@@ -3,6 +3,9 @@
 function curry(func) {
     let params = [];
 
+    return function _curry(...args) {
+        params = args.concat(params);
+    };
 }
 
 function add1(a, b, c) {
